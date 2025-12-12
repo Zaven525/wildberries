@@ -14,14 +14,26 @@ public:
     virtual void remove_product(product* product);
     virtual void remove_product(std::string id);
     virtual void add_product(product* product);
-    
 };
-class Basket : public Hub {}
-class Wish_list : 
-class History;
+class Basket : public Hub {};
+class Wish_list : public Hub {}; 
+class History : public Hub {}; 
+
 inline static size_t initial_card_number = 1110345618584847;
-class Bank_card;
-class Address;
+class Bank_card 
+{
+    size_t id;
+    double balance;
+};
+
+class Address 
+{
+private:
+    enum class Country {Amerika, Rusastan, Dzorap};
+    std::string Region;
+    std::string Street;
+    std::string House;
+};
 
 
 inline static size_t id = 0;
@@ -29,7 +41,7 @@ class User
 {
 private:
     std::string _name;
-    enum class Gender {Male, Female, Helicopter, other};
+    enum class Gender {Male, Female, Helicopter, Crouasant, other};
     Gender gender;
     short age;
     std::string Uid;
